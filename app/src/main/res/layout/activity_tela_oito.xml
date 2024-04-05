@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TelaOito">
+    <View android:id="@+id/containerLogin"
+          android:layout_width="425dp"
+          android:layout_height="427dp"
+          android:background="@drawable/conteine_login"
+          android:layout_marginHorizontal="20dp"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agendamento"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="@id/containerLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="serif" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.006"/>
+
+    <EditText
+            android:id="@+id/editUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/idit_login_text"
+            android:padding="15dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:fontFamily="serif"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="408dp"
+            tools:layout_editor_absoluteX="-11dp" android:textStyle="italic"
+            app:layout_constraintTop_toTopOf="@+id/containerLogin" app:layout_constraintVertical_bias="0.333"/>
+    <EditText
+            android:id="@+id/editHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hora"
+            android:layout_marginHorizontal="40dp"
+            app:layout_constraintStart_toStartOf="@id/containerLogin"
+            app:layout_constraintEnd_toEndOf="@id/containerLogin"
+            android:background="@drawable/idit_login_text"
+            android:padding="15dp"
+            android:inputType="time"
+            android:maxLines="1"
+            android:fontFamily="serif" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="328dp" android:textStyle="italic"
+            app:layout_constraintTop_toTopOf="@+id/containerLogin" app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintVertical_bias="0.445"/>
+    <EditText
+            android:id="@+id/editData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data"
+            android:layout_marginHorizontal="40dp"
+            app:layout_constraintStart_toStartOf="@id/containerLogin"
+            app:layout_constraintEnd_toEndOf="@id/containerLogin"
+            android:background="@drawable/idit_login_text"
+            android:padding="15dp"
+            android:inputType="time|date"
+            android:layout_marginVertical="10dp"
+            android:maxLines="1"
+            android:fontFamily="serif" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.323" android:textStyle="italic"
+            app:layout_constraintHorizontal_bias="0.489" app:layout_constraintTop_toTopOf="@+id/containerLogin"/>
+    <TextView
+            android:text="Agendar"
+            android:onClick="agendar1"
+            android:fontFamily="serif"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.67"/>
+    <Spinner
+            android:id="@+id/spinnerFormaPagamento"
+            android:layout_width="402dp"
+            android:layout_height="56dp"
+            app:layout_constraintStart_toStartOf="@id/containerLogin"
+            app:layout_constraintEnd_toEndOf="@id/containerLogin"
+            android:background="@drawable/idit_login_text"
+            android:padding="15dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.441" app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintTop_toTopOf="@+id/containerLogin"
+            android:entries="@array/forma_pagamento_options"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
